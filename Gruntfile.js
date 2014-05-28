@@ -6,8 +6,8 @@ module.exports = function ( grunt ) {
    */
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
@@ -48,16 +48,7 @@ module.exports = function ( grunt ) {
         ' */\n'
     },
 
-    connect: {
-      server: {
-        options: {
-          port: 3000,
-          base: '<%= build_dir %>',
-          // Change this to '0.0.0.0' to access the server from outside.
-          hostname: 'localhost'
-        }
-      }
-    },
+    
     /**
      * Increments the version number, etc.
      */
@@ -263,6 +254,17 @@ module.exports = function ( grunt ) {
         },
         src: [ '<%= app_files.ctpl %>' ],
         dest: '<%= build_dir %>/templates-common.js'
+      }
+    },
+
+    connect: {
+      server: {
+        options: {
+          port: 3000,
+          base: '<%= build_dir %>',
+          // Change this to '0.0.0.0' to access the server from outside.
+          hostname: 'localhost'
+        }
       }
     },
 
