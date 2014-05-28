@@ -61,7 +61,7 @@ module.exports = {
     js: [
       'vendor/angular/angular.js',
       'vendor/angular-cookies/angular-cookies.js',
-      'vendor/auth0-widget.js/build/auth0-widget.js',
+      'vendor/auth0-widget.js/build/auth0-widget.min.js',
       'vendor/auth0-angular/build/auth0-angular.js',
       'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
       'vendor/angular-route/angular-route.js',
