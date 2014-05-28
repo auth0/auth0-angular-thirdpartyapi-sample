@@ -1,5 +1,5 @@
 /**
- * auth0-angular-api-sample - v0.1.0 - 2014-05-27
+ * auth0-angular-api-sample - v0.1.0 - 2014-05-28
  * http://www.auth0.com/
  *
  * Copyright (c) 2014 Martin Gontovnikas
