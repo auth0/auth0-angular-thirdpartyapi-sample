@@ -1,5 +1,5 @@
 angular.module( 'sample.login', [
-  
+
 ])
 .controller( 'LoginCtrl', function HomeController( $scope, auth, $location, $http ) {
 
@@ -9,7 +9,7 @@ angular.module( 'sample.login', [
         }).then(function(profile) {
           // Using a firebase token for this example
           // Replace here with your client token
-          return auth.getToken('IckaP4QRfGSRGuVZfP9VJBUdlXtgcS4o')  
+          return auth.getToken('IckaP4QRfGSRGuVZfP9VJBUdlXtgcS4o')
         }).then(function(firebaseToken) {
           // Setting the Firebase token for all requests as default one
           $http.defaults.headers.common.Authorization =  'Bearer '+ auth.idToken;
@@ -18,5 +18,5 @@ angular.module( 'sample.login', [
           console.log("There was an error signin in", err);
         });
     }
-  
+
 });

@@ -1,6 +1,6 @@
 angular.module( 'sample', [
   'templates-app',
-  'auth0', 
+  'auth0',
   'ngRoute',
   'templates-common',
   'sample.home',
@@ -26,18 +26,13 @@ angular.module( 'sample', [
   authProvider.init({
     domain: 'samples.auth0.com',
     clientID: 'BUIJSW9x60sIHBw8Kd9EmCbj8eDIFxDC',
-    callbackURL: location.href
+    callbackURL: location.href,
+    loginUrl: '/login'
   });
 })
 
-.run(function($rootScope, auth, $location) {
-  $rootScope.$on('$routeChangeStart', function(e, nextRoute, currentRoute) {
-    if (nextRoute.$$route && nextRoute.$$route.requiresLogin) {
-      if (!auth.isAuthenticated) {
-        $location.path('/login');
-      }
-    }
-  })
+.run(function(auth) {
+  auth.hookEvents();
 })
 .controller( 'AppCtrl', function AppCtrl ( $scope, $location ) {
   $scope.$on('$routeChangeSuccess', function(e, nextRoute){
