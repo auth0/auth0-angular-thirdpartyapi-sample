@@ -1,7 +1,6 @@
 {
   "name": "Auth0 + AngularJS + Third Party API",
   "type": "sample",
-  "seed": true,
   "tags": [
     "angularjs",
     "browser",
